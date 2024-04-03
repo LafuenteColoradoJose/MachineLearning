@@ -34,6 +34,7 @@ class Perceptron:
         while True:
             erro = False
             u = 0
+            j = 0
 
             for i in range(self.col_sample + 1):
                 u = u + self.weight[j] * self.sample[i][j]
@@ -42,10 +43,10 @@ class Perceptron:
                     for j in range(self.col_sample + 1):
                         self.weight[j] = self.weight[j] + self.learn_rate * \
                             (self.exit[i] - y) * self.sample[i][j]
-                        error = True
+                        erro = True
                         epoch_count = epoch_count + 1
             if erro == False:
-                print(("\nEpoch:\n", epoch_count))
+                print(('\nEpoch:\n', epoch_count))
                 print('-----------------\n')
                 break
 
@@ -92,5 +93,6 @@ while True:
     for i in range(2):
         sample.insert(i, float(input('Valor: ')))
 
-
 network.sort(sample)
+
+

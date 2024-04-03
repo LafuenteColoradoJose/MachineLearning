@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon Apr  1 11:20:47 2024
+Created on Wed Apr  3 09:42:56 2024
 
 @author: pp
 """
@@ -37,8 +37,7 @@ print()
 print('Nombre se las columnas')
 print(dataset.feature_names)
 
-
-##### PREPARAR LA DATA MAQUINAS VECTORES SOPORTE CLASIFICACION   #####
+##### PREPARAR LA DATA ARBOLES DE DECISION   #####
 
 #Seleccionamos todas las columnas
 X = dataset.data
@@ -46,7 +45,7 @@ X = dataset.data
 #Defino los datos correspondientes a las etiquetas
 y = dataset.target
 
-##### IMPLEMENTACION MAQUINAS VECTORES DE SOPORTE CLASIFICACION  #####
+##### IMPLEMENTACION ARBOLES DE DECISION  #####
 
 from sklearn.model_selection import train_test_split
 
@@ -55,9 +54,9 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 
 #Defino el alogitmo a utilizar
-from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
 
-algoritmo = SVC(kernel='linear')
+algoritmo = DecisionTreeClassifier(criterion="entropy")
 
 #Entreno el modelo
 algoritmo.fit(X_train, y_train)
