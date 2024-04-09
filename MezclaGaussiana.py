@@ -11,7 +11,6 @@ import matplotlib.pyplot as plt
 from sklearn.datasets import make_blobs
 from sklearn.mixture import GaussianMixture
 import numpy as np
-import numpy as np
 
 sns.set_context("talk", font_scale=1.5)
 
