@@ -55,7 +55,7 @@ plt.plot(historial.history['loss'])
 # Hacemos una predicción (35C x 9)/5 + 32 = 95F
 print("\n")
 print('Predicción')
-print(modelo.predict([35.0]))
+print(modelo.predict(np.array([35.0])))
 print("\n")
 
 # Imprimimos los pesos de la capa/s
