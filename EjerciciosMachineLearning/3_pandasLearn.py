@@ -13,7 +13,7 @@ print('DataFrame básico')
 print(df)
 print('\n')
 
-series = pd.Series({'Agerntina': 'Buenos Aires', 'Chile': 'Santiago', 'Colombia': 'Bogotá', 'Perú': 'Lima'})
+series = pd.Series({'Argentina': 'Buenos Aires', 'Chile': 'Santiago', 'Colombia': 'Bogotá', 'Perú': 'Lima'})
 print('SERIES:')
 print(series)
 print('\n')

@@ -9,7 +9,7 @@ Created on Mon Apr  1 12:46:02 2024
 # importamos librerias
 
 import numpy as np
-import matplotlib.pyplot as plt
+
 import pandas as pd
 
 dataset  = pd.read_csv('/home/pp/Escritorio/Proyectos/MachineLearning/REC017260.csv')
@@ -54,7 +54,7 @@ X_train = sc.fit_transform(X_train)
 X_test = sc.fit_transform(X_test)
 
 # Parte 2 - Construir la Red Neuronal
-import keras
+
 from keras.models import Sequential
 from keras.layers import Dense
 
