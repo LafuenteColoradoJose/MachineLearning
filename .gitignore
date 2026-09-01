@@ -14,3 +14,4 @@ env/
 # Directorios de usuario previos
 .alpackages
 tareas/
+.env
