@@ -1,6 +1,16 @@
-.odt
-.pdf
-.png
-__pycahe__
+# Python y caché
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos Virtuales
+.venv/
+venv/
+env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Directorios de usuario previos
 .alpackages
 tareas/

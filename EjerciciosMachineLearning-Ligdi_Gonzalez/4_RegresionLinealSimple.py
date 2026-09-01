@@ -17,12 +17,13 @@ Created on Tue Mar 26 12:03:53 2024
 # importamos
 import numpy as np
 from sklearn import datasets, linear_model
+from sklearn.utils import Bunch
 import matplotlib.pyplot as plt
 
 ##### PREPARAMOS LOS DATOS #####
 
 # importamos los datos de la misma libreria de scikit-learn
-california = datasets.fetch_california_housing()
+california: Bunch = datasets.fetch_california_housing()
 print(california)
 print()
 
