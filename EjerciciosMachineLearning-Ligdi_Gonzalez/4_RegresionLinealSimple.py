@@ -23,7 +23,8 @@ import matplotlib.pyplot as plt
 ##### PREPARAMOS LOS DATOS #####
 
 # importamos los datos de la misma libreria de scikit-learn
-california: Bunch = datasets.fetch_california_housing()
+california = datasets.fetch_california_housing()
+assert isinstance(california, Bunch)
 print(california)
 print()
 

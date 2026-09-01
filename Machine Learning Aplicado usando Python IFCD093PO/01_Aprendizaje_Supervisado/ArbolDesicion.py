@@ -9,10 +9,12 @@ Created on Wed Mar 27 12:34:35 2024
 import pandas as pd
 import numpy as np
 
+from sklearn.utils import Bunch
 from sklearn.datasets import load_iris
 from sklearn import tree  # Importar tree de sklearn
 
 iris=load_iris()
+assert isinstance(iris, Bunch)
 
 print(iris.feature_names)
 print(iris.target_names)

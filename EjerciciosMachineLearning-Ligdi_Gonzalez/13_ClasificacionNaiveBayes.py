@@ -8,11 +8,13 @@ Created on Wed Apr  3 09:35:57 2024
 
 # importamos
 from sklearn import datasets
+from sklearn.utils import Bunch
 
 ##### PREPARAMOS LOS DATOS #####
 
 # importamos los datos de la misma libreria de scikit-learn
 dataset = datasets.load_breast_cancer()
+assert isinstance(dataset, Bunch)
 print(dataset)
 print()
 

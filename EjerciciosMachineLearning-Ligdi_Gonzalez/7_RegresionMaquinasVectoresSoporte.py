@@ -10,13 +10,15 @@ Created on Wed Mar 27 11:23:32 2024
 
 # importamos
 import numpy as np
-from sklearn import datasets, linear_model
+from sklearn import datasets
+from sklearn.utils import Bunch, linear_model
 import matplotlib.pyplot as plt
 
 ##### PREPARAMOS LOS DATOS #####
 
 # importamos los datos de la misma libreria de scikit-learn
 california = datasets.fetch_california_housing()
+assert isinstance(california, Bunch)
 print(california)
 print()
 
