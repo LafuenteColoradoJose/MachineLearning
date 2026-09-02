@@ -11,7 +11,7 @@ import seaborn as sns
 from datetime import datetime
 
 print("Cargando el dataset limpio...")
-df = pd.read_csv("data/historico_cordoba_limpio.csv")
+df = pd.read_csv("../data/historico_cordoba_limpio.csv")
 
 # 1. Eliminar datos nulos de temperatura media si los hubiera
 df = df.dropna(subset=['tmed'])
@@ -47,7 +47,7 @@ plt.xlabel("Año", fontsize=12)
 plt.ylabel("Temperatura Media Anual (ºC)", fontsize=12)
 
 # 7. Guardar el gráfico como imagen PNG numerada
-ruta_grafico = "5_tendencia_temperatura_anual.png"
+ruta_grafico = "../2_Visualizacion/5_tendencia_temperatura_anual.png"
 plt.savefig(ruta_grafico, dpi=300, bbox_inches='tight')
 print(f"¡Gráfico guardado en: {ruta_grafico}!")
 

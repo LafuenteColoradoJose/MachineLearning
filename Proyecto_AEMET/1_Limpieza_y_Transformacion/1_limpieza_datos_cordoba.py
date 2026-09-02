@@ -11,7 +11,7 @@ import numpy as np
 print("--- 1. CARGA DE DATOS ---")
 # Leemos el archivo original. 
 # Importante: Como es un CSV, le decimos a Pandas cómo se llama el archivo.
-ruta_archivo = "data/historico_cordoba_aeropuerto_completo.csv"
+ruta_archivo = "../data/historico_cordoba_aeropuerto_completo.csv"
 df = pd.read_csv(ruta_archivo)
 
 # Vemos qué aspecto tienen los datos iniciales
@@ -86,7 +86,7 @@ print("\n-------------------------------------------------\n")
 print("--- 5. GUARDAR LOS DATOS LIMPIOS ---")
 # Ahora que tenemos fechas reales y números matemáticos puros,
 # guardamos nuestro dataset final preparado para IA.
-ruta_salida = "data/historico_cordoba_limpio.csv"
+ruta_salida = "../data/historico_cordoba_limpio.csv"
 df.to_csv(ruta_salida, index=False)
 
 print(f"¡Éxito! Tu dataset limpio está guardado en: {ruta_salida}")

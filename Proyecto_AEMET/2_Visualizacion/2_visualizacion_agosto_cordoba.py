@@ -11,7 +11,7 @@ import seaborn as sns
 
 # 1. Cargar los datos limpios
 print("Cargando el dataset limpio...")
-df = pd.read_csv("data/historico_cordoba_limpio.csv")
+df = pd.read_csv("../data/historico_cordoba_limpio.csv")
 
 # 2. Filtrar los datos: ¡Solo queremos el mes de Agosto!
 # Seleccionamos las filas donde la columna 'mes' es igual a 8
@@ -45,7 +45,7 @@ plt.ylabel("Temperatura Máxima Media (ºC)", fontsize=12)
 plt.grid(True, linestyle='--', alpha=0.6)
 
 # 7. Guardar el gráfico como imagen PNG
-ruta_grafico = "2_evolucion_agosto_cordoba.png"
+ruta_grafico = "../2_Visualizacion/2_evolucion_agosto_cordoba.png"
 plt.savefig(ruta_grafico, dpi=300, bbox_inches='tight')
 print(f"¡Gráfico guardado espectacularmente en: {ruta_grafico}!")
 

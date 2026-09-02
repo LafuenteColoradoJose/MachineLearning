@@ -12,7 +12,7 @@ import seaborn as sns
 from datetime import datetime
 
 print("Cargando el dataset limpio para tendencia anual de lluvias...")
-df = pd.read_csv("data/historico_cordoba_limpio.csv")
+df = pd.read_csv("../data/historico_cordoba_limpio.csv")
 
 # Aseguramos que no hay nulos en precipitaciones
 df['prec'] = df['prec'].fillna(0)
@@ -51,7 +51,7 @@ plt.xlabel("Año", fontsize=12)
 plt.ylabel("Lluvia Total Acumulada Anual (Litros/m²)", fontsize=12)
 
 # Guardar y mostrar
-ruta_grafico = "4_tendencia_lluvias_cordoba.png"
+ruta_grafico = "../2_Visualizacion/4_tendencia_lluvias_cordoba.png"
 plt.savefig(ruta_grafico, dpi=300, bbox_inches='tight')
 print(f"¡Gráfico guardado en: {ruta_grafico}!")
 

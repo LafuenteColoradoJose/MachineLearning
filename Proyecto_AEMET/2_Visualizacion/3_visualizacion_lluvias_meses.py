@@ -12,7 +12,7 @@ import calendar
 
 # 1. Cargar los datos limpios
 print("Cargando el dataset limpio para analizar lluvias...")
-df = pd.read_csv("data/historico_cordoba_limpio.csv")
+df = pd.read_csv("../data/historico_cordoba_limpio.csv")
 
 # Nos aseguramos de que no haya nulos en precipitaciones rellenando con 0
 df['prec'] = df['prec'].fillna(0)
@@ -52,7 +52,7 @@ for i in ax.containers:
     ax.bar_label(i, fmt='%.1f', padding=3, color='black', fontsize=10)
 
 # 6. Guardar y mostrar
-ruta_grafico = "3_estacionalidad_lluvias_cordoba.png"
+ruta_grafico = "../2_Visualizacion/3_estacionalidad_lluvias_cordoba.png"
 plt.savefig(ruta_grafico, dpi=300, bbox_inches='tight')
 print(f"¡Gráfico de precipitaciones guardado en: {ruta_grafico}!")
 
