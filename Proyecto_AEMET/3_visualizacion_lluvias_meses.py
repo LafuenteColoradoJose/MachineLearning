@@ -52,7 +52,7 @@ for i in ax.containers:
     ax.bar_label(i, fmt='%.1f', padding=3, color='black', fontsize=10)
 
 # 6. Guardar y mostrar
-ruta_grafico = "estacionalidad_lluvias_cordoba.png"
+ruta_grafico = "3_estacionalidad_lluvias_cordoba.png"
 plt.savefig(ruta_grafico, dpi=300, bbox_inches='tight')
 print(f"¡Gráfico de precipitaciones guardado en: {ruta_grafico}!")
 

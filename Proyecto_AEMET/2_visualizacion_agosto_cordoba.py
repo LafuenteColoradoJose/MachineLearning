@@ -45,7 +45,7 @@ plt.ylabel("Temperatura Máxima Media (ºC)", fontsize=12)
 plt.grid(True, linestyle='--', alpha=0.6)
 
 # 7. Guardar el gráfico como imagen PNG
-ruta_grafico = "evolucion_agosto_cordoba.png"
+ruta_grafico = "2_evolucion_agosto_cordoba.png"
 plt.savefig(ruta_grafico, dpi=300, bbox_inches='tight')
 print(f"¡Gráfico guardado espectacularmente en: {ruta_grafico}!")
 

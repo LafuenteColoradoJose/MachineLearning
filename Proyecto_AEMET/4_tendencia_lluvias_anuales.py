@@ -51,7 +51,7 @@ plt.xlabel("Año", fontsize=12)
 plt.ylabel("Lluvia Total Acumulada Anual (Litros/m²)", fontsize=12)
 
 # Guardar y mostrar
-ruta_grafico = "tendencia_lluvias_cordoba.png"
+ruta_grafico = "4_tendencia_lluvias_cordoba.png"
 plt.savefig(ruta_grafico, dpi=300, bbox_inches='tight')
 print(f"¡Gráfico guardado en: {ruta_grafico}!")
 
