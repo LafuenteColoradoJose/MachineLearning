@@ -10,8 +10,8 @@ Created on Tue Mar 26 12:03:53 2024
 
 # importamos
 import numpy as np
-from sklearn import datasets
-from sklearn.utils import Bunch, linear_model
+from sklearn import datasets, linear_model
+from sklearn.utils import Bunch
 import matplotlib.pyplot as plt
 
 ##### PREPARAMOS LOS DATOS #####

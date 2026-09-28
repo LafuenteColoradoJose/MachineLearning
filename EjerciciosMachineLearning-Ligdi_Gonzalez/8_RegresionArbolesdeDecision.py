@@ -9,8 +9,8 @@ Created on Wed Mar 27 12:04:03 2024
 
 # importamos
 import numpy as np
-from sklearn import datasets
-from sklearn.utils import Bunch, linear_model
+from sklearn import datasets, linear_model
+from sklearn.utils import Bunch
 import matplotlib.pyplot as plt
 
 ##### PREPARAMOS LOS DATOS #####
@@ -74,7 +74,7 @@ adr.fit(X_train, y_train)
 Y_pred = adr.predict(X_test)
 
 #Graficamos los datos junto con el modelo
-X_grid = np.arange(min(X_test), max(X_test), 0.1 )
+X_grid = np.arange((X_test.min()), (X_test.max()), 0.1 )
 X_grid = X_grid.reshape((len(X_grid), 1))
 plt.scatter(X_test, y_test)
 plt.plot(X_grid, adr.predict(X_grid), color='red', linewidth=3)
