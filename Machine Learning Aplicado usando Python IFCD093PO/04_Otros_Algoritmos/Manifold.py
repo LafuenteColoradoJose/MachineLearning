@@ -14,7 +14,7 @@ from mpl_toolkits.mplot3d import Axes3D
 from matplotlib.ticker import NullFormatter
 from sklearn import manifold, datasets
 
-Axes3D
+#Axes3D
 n_points = 1000
 X, color = datasets.make_s_curve(n_points, random_state=0)
 n_neighbors = 10
@@ -27,18 +27,18 @@ plt.suptitle("Manifold Learning with %i points, %i neighbors"
 
 # 3D scatter plot
 ax = fig.add_subplot(251, projection='3d')
-ax.scatter(X[:, 0], X[:, 1], X[:, 2], c=color, cmap=plt.cm.Spectral)
+ax.scatter(X[:, 0], X[:, 1], X[:, 2], c=color, cmap=plt.cm.Spectral) # type: ignore
 ax.view_init(4, -72)
 
 #Configurar métodos de reducción de dimensionalidad
 LLE = partial(manifold.LocallyLinearEmbedding,
-              n_neighbors, n_components, eigen_solver='auto')
+              n_neighbors=n_neighbors, n_components=n_components, eigen_solver='auto')
 metgods = OrderedDict()
 metgods['LLE'] = LLE(method='standard')
 metgods['LTSA'] = LLE(method='ltsa')
 metgods['Hessian LLE'] = LLE(method='hessian')
 metgods['Modified LLE'] = LLE(method='modified')
-metgods['Isomap'] = manifold.Isomap(n_neighbors, n_components)
+metgods['Isomap'] = manifold.Isomap(n_neighbors=n_neighbors, n_components=n_components)
 metgods['MDS'] = manifold.MDS(n_components, max_iter=100, n_init=1)
 metgods['SE'] = manifold.SpectralEmbedding(n_components=n_components,
                                            n_neighbors=n_neighbors)

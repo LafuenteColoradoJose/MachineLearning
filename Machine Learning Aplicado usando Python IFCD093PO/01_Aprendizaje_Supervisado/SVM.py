@@ -13,7 +13,7 @@ import seaborn as sns; sns.set()
 
 from sklearn.datasets import make_blobs
 
-X, y = make_blobs(n_samples=100, centers=2, random_state=0, cluster_std=0.50)
+X, y = make_blobs(n_samples=100, centers=2, random_state=0, cluster_std=0.50) # type: ignore
 
 xfit = np.linspace(-1,3, 5)
 plt.scatter(X[:, 0], X[:, 1], c=y, s=50, cmap='summer')
@@ -36,7 +36,10 @@ def decision_function(model, ax=None, plot_support=True):
         xlim = ax.get_xlim()
         ylim = ax.get_ylim()
         
-x = np.linspace(xlim[0], xlim[30],30)
+    x = np.linspace(xlim[0], xlim[1],30)
+
+decision_function(model)
+plt.show()
 
 
 
