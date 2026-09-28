@@ -12,6 +12,8 @@ lista_3d = [
     ]
 ]
 
+print(lista_3d[0][1][2], "\n")
+
 for i in lista_3d:
     for x in i:
         for z in x:
@@ -19,6 +21,8 @@ for i in lista_3d:
                 print(z, "\n")
                 
 import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 
 array_3d = np.array(lista_3d)
 
@@ -33,3 +37,9 @@ array_3d_ordenado_reves = -np.sort(-array_3d)
 print('\n')
 print("Ordenado al revés")
 print(array_3d_ordenado_reves)
+
+
+array_2d = array_3d.reshape(4, 3)
+df = pd.DataFrame(array_2d, columns=["Columna_A", "Columna_B", "Columna_C"])
+df.plot()
+plt.show()
